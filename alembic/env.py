@@ -14,12 +14,19 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
+# Import from our app
+from core.config import settings
+from database.db import Base
+#Config de database conexion url
+config.set_main_option("sqlalchemy.url", settings.SQLALCHEMY_DATABASE_URI)
+
+
 # add your model's MetaData object here
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = None
-
+# target_metadata = None
+target_metadata = Base.metadata
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
