@@ -19,6 +19,7 @@ from core.config import settings
 from database.db import Base
 from user.models import User
 from products.models import Category, Product
+from cart.models import Cart, CartItems
 #Config de database conexion url
 config.set_main_option("sqlalchemy.url", settings.SQLALCHEMY_DATABASE_URI)
 
