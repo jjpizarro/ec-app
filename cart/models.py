@@ -1,7 +1,7 @@
-from sqlalchemy import Column, Integer, ForeignKey, DateTime
-from sqlalchemy.orm import  relationship
-
 from datetime import datetime
+
+from sqlalchemy import Column, Integer, ForeignKey, DateTime
+from sqlalchemy.orm import relationship
 
 from database.db import Base
 from products.models import Product
@@ -27,4 +27,3 @@ class CartItems(Base):
     cart = relationship("Cart", back_populates="cart_items")
     products = relationship("Product", back_populates="cart_items")
     created_date = Column(DateTime, default=datetime.now)
-

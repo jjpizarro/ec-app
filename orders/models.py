@@ -2,10 +2,10 @@ from datetime import datetime
 
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Text, DateTime
 from sqlalchemy.orm import relationship
-
+from database.db import Base
 from user.models import User
 from products.models import Product
-from database.db import Base
+
 
 class Order(Base):
     __tablename__ = "order"
@@ -30,4 +30,3 @@ class OrderDetails(Base):
     product_order_details = relationship("Product", back_populates="order_details")
     quantity = Column(Integer, default=1)
     created = Column(DateTime, default=datetime.now)
-
