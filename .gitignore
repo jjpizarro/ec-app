@@ -1,5 +1,6 @@
 .mypy_cache
 .python-version
-
+venv
 __pycache__
 .idea
+.idea/*
