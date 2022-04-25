@@ -15,12 +15,11 @@ if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
 # Import from our app
-from core.config import settings
-from database.db import Base
-from user.models import User
-from products.models import Category, Product
-from orders.models import Order, OrderDetails
-from cart.models import Cart, CartItems
+from app.core.config import settings
+from app.database.db import Base
+from app.user.models import User
+from app.orders.models import Order, OrderDetails
+
 #Config de database conexion url
 config.set_main_option("sqlalchemy.url", settings.SQLALCHEMY_DATABASE_URI)
 

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from database.db import Base
-from core import hashing
+from app.database.db import Base
+from app.core import hashing
 
 
 class User(Base):

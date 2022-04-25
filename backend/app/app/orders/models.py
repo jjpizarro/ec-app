@@ -2,9 +2,9 @@ from datetime import datetime
 
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Text, DateTime
 from sqlalchemy.orm import relationship
-from database.db import Base
-from user.models import User
-from products.models import Product
+from app.database.db import Base
+from app.user.models import User
+from app.products.models import Product
 
 
 class Order(Base):

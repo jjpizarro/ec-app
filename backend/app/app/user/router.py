@@ -1,9 +1,9 @@
 from typing import List
 
-from fastapi import APIRouter, Depends, status, Response, HTTPException
+from fastapi import APIRouter, Depends, status, HTTPException
 from sqlalchemy.orm import Session
 
-from database import db
+from app.database import db
 
 from . import schema
 from . import services

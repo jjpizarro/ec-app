@@ -3,9 +3,10 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 
-from database.db import Base
-from products.models import Product
-from user.models import User
+from app.database.db import Base
+
+from app.products.models import Product
+from app.user.models import User
 
 
 class Cart(Base):

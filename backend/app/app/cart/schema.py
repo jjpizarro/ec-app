@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 import datetime
 from typing import List
-from products.schemas import Product
+from app.products.schemas import Product
 
 class CartItemsBase(BaseModel):
     products: Product
